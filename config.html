@@ -440,58 +440,84 @@
             <div id="canvas-container" style="max-width: 1440px; height:700px;margin:auto; position: relative;">
                 <canvas style="position: absolute; top: 0;left: 0; touch-action: none;outline:none;border: none"></canvas>
                 <div id="menu" style="position: absolute; top: 0;left: 0; width: 270px; height: 700px;margin: 0;padding: 10px; background-color: rgba(0,0,0,0);">
-                    <h3 style="font-weight: bold; font-size: 16px;">Couleur de la carrosserie</h3>
+                    <style>
+                        .color-selector>div{
+                            width: 25%; 
+                            margin: 0; 
+                            box-sizing:border-box; 
+                            height: 20px; 
+                            cursor: pointer; 
+                            display: block;
+                            float:left;
+                            border: solid 1px grey;
+                        }
+                        .hide-show>div{
+                            cursor: pointer; 
+                            display: inline-block; 
+                            border-radius: 2px; 
+                        }
+                        #menu>hr {
+                            margin-bottom: 10px; 
+                            margin-top: 10px;
+                        }
+                        #menu>h3{
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+                    </style>
+                    
+                    <h3>Couleur de la carrosserie</h3>
                     <div class="color-selector" data-materiaux="carpaint">
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: white; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: grey; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: yellow; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: red; border: solid 1px black;"></div>
+                        <div style="background-color: white;"></div>
+                        <div style="background-color: grey;"></div>
+                        <div style="background-color: yellow;"></div>
+                        <div style="background-color: red;"></div>
                     </div>
                     
-                    <hr style="margin-bottom: 10px; margin-top: 10px;">
+                    <hr>
                     
-                    <h3 style="font-weight: bold; font-size: 16px;">Couleur du PI</h3>
+                    <h3>Couleur du PI</h3>
                     <div class="color-selector" data-materiaux="PI">
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: white; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: grey; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: yellow; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: red; border: solid 1px black;"></div>
+                        <div style="background-color: white;"></div>
+                        <div style="background-color: grey;"></div>
+                        <div style="background-color: yellow;"></div>
+                        <div style="background-color: red;"></div>
                     </div>
                     
-                    <hr style="margin-bottom: 10px; margin-top: 10px;">
+                    <hr>
 
-                    <h3 style="font-weight: bold; font-size: 16px;">Couleur des déflecteurs latéraux</h3>
+                    <h3>Couleur des déflecteurs latéraux</h3>
                     <div class="color-selector" data-materiaux="deflecteurs lateraux">
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: white; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: grey; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: yellow; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: red; border: solid 1px black;"></div>
+                        <div style="background-color: white;"></div>
+                        <div style="background-color: grey;"></div>
+                        <div style="background-color: yellow;"></div>
+                        <div style="background-color: red;"></div>
                     </div>
                     
-                    <hr style="margin-bottom: 10px; margin-top: 10px;">
+                    <hr>
 
-                    <h3 style="font-weight: bold; font-size: 16px;">Couleur du déflecteur de pavillon</h3>
+                    <h3>Couleur du déflecteur de pavillon</h3>
                     <div class="color-selector" data-materiaux="deflecteur pavilllon">
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: white; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: grey; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: yellow; border: solid 1px black;"></div>
-                        <div style="width: 40px; height: 20px; cursor: pointer; display: inline-block; background-color: red; border: solid 1px black;"></div>
+                        <div style="background-color: white;"></div>
+                        <div style="background-color: grey;"></div>
+                        <div style="background-color: yellow;"></div>
+                        <div style="background-color: red;"></div>
                     </div>
                     
-                    <hr style="margin-bottom: 10px; margin-top: 10px;">
+                    <hr>
 
-                    <h3 style="font-weight: bold; font-size: 16px;">Viscope</h3>
+                    <h3>Viscope</h3>
                     <div class="hide-show" data-element="viscope">
-                        <div data-visibility="1" style="cursor: pointer; display: inline-block; border-radius: 2px; color:black; background-color: #9e9ef3;"><p style="margin: 5px 30px;">Avec</p></div>
-                        <div data-visibility="0" style="cursor: pointer; display: inline-block; border-radius: 2px; color:black; background-color: rgb(211, 211, 211);"><p style="margin: 5px 30px;">Sans</p></div>
+                        <div data-visibility="1" style="color:white; background-color: black;"><p style="margin: 5px 53px;">Avec</p></div>
+                        <div data-visibility="0" style="color:black; background-color: rgb(230, 230, 230);"><p style="margin: 5px 53px;">Sans</p></div>
                     </div>
                     
-                    <hr style="margin-bottom: 10px; margin-top: 10px;">
+                    <hr>
 
-                    <h3 style="font-weight: bold; font-size: 16px;">Trompes</h3>
+                    <h3>Trompes</h3>
                     <div class="hide-show" data-element="trompe">
-                        <div data-visibility="1" style="cursor: pointer; display: inline-block; border-radius: 2px; color:black; background-color: #9e9ef3;"><p style="margin: 5px 30px;">Avec</p></div>
-                        <div data-visibility="0" style="cursor: pointer; display: inline-block; border-radius: 2px; color:black; background-color: rgb(211, 211, 211);"><p style="margin: 5px 30px;">Sans</p></div>
+                        <div data-visibility="1" style="color:white; background-color: black;"><p style="margin: 5px 53px;">Avec</p></div>
+                        <div data-visibility="0" style="color:black; background-color: rgb(230, 230, 230);"><p style="margin: 5px 53px;">Sans</p></div>
                     </div>
 
                 </div>
